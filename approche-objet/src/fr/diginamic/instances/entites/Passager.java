@@ -1,3 +1,6 @@
+package fr.diginamic.instances.entites;
+
+
 public class Passager {
     private String nom;
     private String prenom;

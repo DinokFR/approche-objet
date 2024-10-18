@@ -1,4 +1,9 @@
+
+package fr.diginamic.instances.entites;
+
 import java.util.Arrays;
+
+
 
 public class Avion {
     private String immatriculation;

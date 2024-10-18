@@ -1,3 +1,5 @@
+package fr.diginamic.instances.entites;
+
 import java.time.LocalDate;
 
 public class Pilote {
