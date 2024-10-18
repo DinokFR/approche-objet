@@ -1,6 +1,7 @@
 package fr.diginamic.instances;
 
 import fr.diginamic.instances.entites.Avion;
+import fr.diginamic.instances.entites.Passager;
 import fr.diginamic.instances.entites.Pilote;
 import java.time.LocalDate;
 
@@ -19,5 +20,12 @@ public class TestAvion {
         // Afficher les informations des avions
         System.out.println(avion1);
         System.out.println(avion2);
+
+        Passager passager1 = new Passager("Durand", "Paul", 1);
+        Passager passager2 = new Passager("Martin", "Claire", 1);
+
+        avion1.ajouterPassager(passager1);
+
+        System.out.println(avion1);
     }
 }

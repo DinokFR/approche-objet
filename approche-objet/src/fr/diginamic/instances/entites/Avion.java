@@ -1,5 +1,7 @@
 package fr.diginamic.instances.entites;
 
+import java.util.Arrays;
+
 public class Avion {
     private String immatriculation;
     private String marque;
@@ -23,6 +25,19 @@ public class Avion {
         this.modele = modele;
         this.pilote = pilote;
         this.passagers = new Passager[0]; // Tableau de passagers vide
+    }
+
+    // Méthode pour ajouter un passager
+    public void ajouterPassager(Passager nouveauPassager) {
+        // Si le tableau de passagers est plein, on l'agrandit
+        if (passagers.length == 0) {
+            passagers = new Passager[1]; // Crée un tableau de taille 1 si c'est vide
+        } else {
+            // Crée un nouveau tableau de taille supérieure et copie les passagers existants
+            passagers = Arrays.copyOf(passagers, passagers.length + 1);
+        }
+        // Ajout du nouveau passager dans le tableau
+        passagers[passagers.length - 1] = nouveauPassager;
     }
 
     // Getters et Setters
@@ -68,6 +83,13 @@ public class Avion {
 
     @Override
     public String toString() {
-        return "Avion [immatriculation=" + immatriculation + ", marque=" + marque + ", modele=" + modele + ", pilote=" + pilote + "]";
+        StringBuilder passagerInfo = new StringBuilder();
+        for (Passager passager : passagers) {
+            passagerInfo.append(passager).append("\n");
+        }
+        
+        return "Avion [Immatriculation=" + immatriculation + ", Marque=" + marque + 
+               ", Modèle=" + modele + ", Pilote=" + pilote + 
+               ", Passagers=\n" + passagerInfo + "]";
     }
 }
