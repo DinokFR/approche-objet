@@ -1,5 +1,3 @@
-package fr.diginamic.instances.entites;
-
 import java.time.LocalDate;
 
 public class Pilote {
@@ -14,7 +12,7 @@ public class Pilote {
         this.dateLicence = dateLicence;
     }
 
-    // Getters et Setters
+    // Getters et setters pour les attributs privés
     public String getNom() {
         return nom;
     }
@@ -41,6 +39,10 @@ public class Pilote {
 
     @Override
     public String toString() {
-        return "Pilote [nom=" + nom + ", prenom=" + prenom + ", dateLicence=" + dateLicence + "]";
+        return "Pilote{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", dateLicence=" + dateLicence +
+                '}';
     }
 }

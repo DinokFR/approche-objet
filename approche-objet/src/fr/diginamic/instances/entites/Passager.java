@@ -1,9 +1,7 @@
-package fr.diginamic.instances.entites;
-
 public class Passager {
     private String nom;
     private String prenom;
-    private int numeroSiege;
+    private int numeroSiege;  // Changement du type de String à int
 
     // Constructeur
     public Passager(String nom, String prenom, int numeroSiege) {
@@ -12,7 +10,7 @@ public class Passager {
         this.numeroSiege = numeroSiege;
     }
 
-    // Getters et Setters
+    // Getters et setters pour les attributs privés
     public String getNom() {
         return nom;
     }
@@ -39,6 +37,10 @@ public class Passager {
 
     @Override
     public String toString() {
-        return "Passager [nom=" + nom + ", prenom=" + prenom + ", numeroSiege=" + numeroSiege + "]";
+        return "Passager{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", numeroSiege=" + numeroSiege +
+                '}';
     }
 }
