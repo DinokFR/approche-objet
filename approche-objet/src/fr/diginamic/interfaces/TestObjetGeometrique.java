@@ -5,7 +5,7 @@ public class TestObjetGeometrique {
     public static void main(String[] args) {
         
 
-        Carre carre = new Carre(5, 5);
+        Carre carre = new Carre(5);
         Rectangle rectangle = new Rectangle(10, 6);
         Cercle cercle = new Cercle(5);
         Sphere sphere = new Sphere(8);
