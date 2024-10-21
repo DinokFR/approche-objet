@@ -12,7 +12,7 @@ public class Theatre {
     }
 
     public void inscrire(int nbclient, double prix){
-        if (inscrit+nbclient > capa){
+        if (inscrit+nbclient <= capa){
             inscrit = inscrit+nbclient;
             recette = recette+(nbclient*prix);
         }
