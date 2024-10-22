@@ -9,7 +9,7 @@ public class Creature {
     protected int force;
     protected int PVmax;
     protected int PV;
-    protected Random random;
+    protected Random random = new Random();
 
     public Creature(String n){
         this.nom = n;
@@ -41,5 +41,20 @@ public class Creature {
 
     public String getNom() {
         return nom;
+    }
+
+    public boolean estVivant() {
+        return this.PV > 0;
+    }
+
+    public int getPV() {
+        return PV;
+    }
+
+    public int getForce() {
+        return force;
+    }
+    public int getPVmax() {
+        return PVmax;
     }
 }
