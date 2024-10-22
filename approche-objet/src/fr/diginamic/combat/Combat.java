@@ -67,6 +67,7 @@ public class Combat {
                         break;
                 }
                 personnage.ajouterScore(points);
+                
                 System.out.println("Victoire! Nouveau score: " + personnage.getScore());
                 recompenseAleatoire();
                 System.out.println();
