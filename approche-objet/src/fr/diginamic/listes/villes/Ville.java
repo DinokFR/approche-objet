@@ -28,4 +28,17 @@ public class Ville {
         return nom + " - " + nbHab + " habitants";
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true; // Si c'est le même objet, ils sont égaux
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false; // Si l'objet est null ou de classe différente, ils ne sont pas égaux
+        }
+        Ville autreVille = (Ville) obj;
+        return nbHab == autreVille.nbHab && nom.equals(autreVille.nom);
+    }
+
+
 }
