@@ -1,6 +1,6 @@
 package fr.diginamic.listes.villes;
 
-public class Ville {
+public class Ville implements Comparable<Ville>{
     private String nom;
     private int nbHab;
 
@@ -39,6 +39,20 @@ public class Ville {
         Ville autreVille = (Ville) obj;
         return nbHab == autreVille.nbHab && nom.equals(autreVille.nom);
     }
+
+    @Override
+    public int compareTo(Ville o) {
+        return Integer.compare(this.nbHab, o.getNbHab());
+    }
+
+    
+    //@Override
+    //public int compareTo(Ville autreVille) {
+    //    return this.nom.compareTo(autreVille.getNom());
+    //}
+
+
+
 
 
 }

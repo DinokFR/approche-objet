@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class LectureFichier {
@@ -22,9 +23,7 @@ public class LectureFichier {
             e.printStackTrace();
         }
 
-        for (String line : lines) {
-            System.out.println(line);
-        }
+
 
         ArrayList<Ville> villes = new ArrayList<>();
 
@@ -42,6 +41,7 @@ public class LectureFichier {
         for (Ville ville : villes) { //On ajoute les villes dans une nouvelle liste de String pour ensuite l'ajouter au fichier
             lineDest.add(ville.getNom()+";"+ville.getCodeDepartement()+";"+ville.getNomRegion()+";"+ville.getPopulationTotale());
         }
+        Collections.sort(lineDest);
 
         try {
             Files.write(path2, lineDest);
@@ -49,7 +49,8 @@ public class LectureFichier {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
+        
+        
 
     }
 

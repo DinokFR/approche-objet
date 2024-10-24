@@ -1,6 +1,6 @@
 package fr.diginamic.fichier;
 
-public class Ville {
+public class Ville implements Comparable<Ville>{
 
     // Attributs
     private String nom;
@@ -58,6 +58,11 @@ public class Ville {
                 ", nomRegion='" + nomRegion + '\'' +
                 ", populationTotale=" + populationTotale +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Ville v) {
+        return Integer.compare(Integer.parseInt(v.getPopulationTotale()), Integer.parseInt(this.populationTotale));
     }
 }
 
