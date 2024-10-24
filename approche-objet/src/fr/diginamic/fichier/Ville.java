@@ -16,6 +16,10 @@ public class Ville implements Comparable<Ville>{
         this.populationTotale = populationTotale;
     }
 
+    public Ville(String string, int i) {
+        //TODO Auto-generated constructor stub
+    }
+
     // Getters et Setters
     public String getNom() {
         return nom;
